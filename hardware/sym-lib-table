@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "fc")(type "KiCad")(uri "${KIPRJMOD}/fc_symbols.kicad_sym")(options "")(descr "KURC F405 project symbols"))
+)

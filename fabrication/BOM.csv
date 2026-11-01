@@ -1,0 +1,79 @@
+Reference,Value,Footprint,MPN,LCSC (fill in),Block,Why it is there
+D1,SMBJ30A,Diode_SMD:D_SMB,SMBJ30A,,1 Power in + 5V buck,TVS: clamps ESC voltage spikes on the battery line
+C1,10uF 50V,Capacitor_SMD:C_1206_3216Metric,1206 10uF 50V X7R/X5R,,1 Power in + 5V buck,Buck input cap (bulk)
+C2,10uF 50V,Capacitor_SMD:C_1206_3216Metric,1206 10uF 50V X7R/X5R,,1 Power in + 5V buck,Buck input cap (bulk)
+C3,100nF 50V,Capacitor_SMD:C_0603_1608Metric,0603 100nF 50V X7R/X5R,,1 Power in + 5V buck,"Buck input cap (high-frequency), right at VIN"
+U1,TPS54360DDA,Package_SO:TI_SO-PowerPAD-8_ThermalVias,TPS54360DDAR,,1 Power in + 5V buck,Buck converter: battery (7-25 V) to 5 V
+C4,100nF,Capacitor_SMD:C_0603_1608Metric,0603 100nF X7R/X5R,,1 Power in + 5V buck,Bootstrap cap: powers the buck's internal high-side switch
+R1,162k,Resistor_SMD:R_0603_1608Metric,0603 162k 1%,,1 Power in + 5V buck,Sets switching frequency to about 600 kHz
+R2,52.3k,Resistor_SMD:R_0603_1608Metric,0603 52.3k 1%,,1 Power in + 5V buck,Feedback divider top: sets output to 5.0 V
+R3,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,,1 Power in + 5V buck,Feedback divider bottom
+R4,8.45k,Resistor_SMD:R_0603_1608Metric,0603 8.45k 1%,,1 Power in + 5V buck,Compensation resistor: keeps the 5 V loop stable (confirm in WEBENCH)
+C5,8.2nF,Capacitor_SMD:C_0402_1005Metric,0402 8.2nF X7R/X5R,,1 Power in + 5V buck,Compensation cap (confirm in WEBENCH)
+C6,47pF,Capacitor_SMD:C_0402_1005Metric,0402 47pF X7R/X5R,,1 Power in + 5V buck,Compensation high-frequency pole cap (confirm in WEBENCH)
+D2,B360B,Diode_SMD:D_SMB,B360B-13-F,,1 Power in + 5V buck,Catch diode: carries inductor current while the switch is off
+L1,10uH 4A,Inductor_SMD:L_Bourns_SRN8040TA,SRN8040TA-100M,,1 Power in + 5V buck,Buck inductor: stores and smooths energy
+C7,22uF 10V,Capacitor_SMD:C_0805_2012Metric,0805 22uF 10V X7R/X5R,,1 Power in + 5V buck,5 V output cap
+C8,22uF 10V,Capacitor_SMD:C_0805_2012Metric,0805 22uF 10V X7R/X5R,,1 Power in + 5V buck,5 V output cap
+D3,B5819W,Diode_SMD:D_SOD-123,B5819W,,2 USB power + 3.3V,"Lets USB power the board, blocks battery 5 V from flowing back into the PC"
+U2,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,AP2112K-3.3TRG1,,2 USB power + 3.3V,"LDO: clean 3.3 V for MCU, gyro, SD"
+C9,1uF,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R/X5R,,2 USB power + 3.3V,LDO input cap
+C10,2.2uF,Capacitor_SMD:C_0603_1608Metric,0603 2.2uF X7R/X5R,,2 USB power + 3.3V,LDO output cap (stability)
+FB1,600R@100MHz,Inductor_SMD:L_0603_1608Metric,BLM18PG601SN1D,,2 USB power + 3.3V,Ferrite bead: filters digital noise out of the gyro supply
+FB2,600R@100MHz,Inductor_SMD:L_0603_1608Metric,BLM18PG601SN1D,,2 USB power + 3.3V,Ferrite bead: filters noise out of the MCU analog supply (ADC)
+R5,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,,2 USB power + 3.3V,Current limit for power LED (about 1 mA)
+D4,RED,LED_SMD:LED_0603_1608Metric,0603 red LED,,2 USB power + 3.3V,Power LED: on when 3.3 V is present
+U3,STM32F405RGT6,Package_QFP:LQFP-64_10x10mm_P0.5mm,STM32F405RGT6,,3 MCU,The MCU: runs Betaflight
+C11,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,3 MCU,Decoupling at MCU VDD pin 19
+C12,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,3 MCU,Decoupling at MCU VDD pin 32
+C13,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,3 MCU,Decoupling at MCU VDD pin 48
+C14,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,3 MCU,Decoupling at MCU VDD pin 64
+C15,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,3 MCU,Decoupling at MCU VBAT pin 1
+C16,4.7uF,Capacitor_SMD:C_0603_1608Metric,0603 4.7uF X7R/X5R,,3 MCU,Bulk cap for the MCU 3.3 V rail
+C17,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,3 MCU,Decoupling at VDDA (analog supply)
+C18,1uF,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R/X5R,,3 MCU,Bulk cap at VDDA
+C19,2.2uF,Capacitor_SMD:C_0603_1608Metric,0603 2.2uF X7R/X5R,,3 MCU,Required by MCU internal 1.2 V core regulator (VCAP_1)
+C20,2.2uF,Capacitor_SMD:C_0603_1608Metric,0603 2.2uF X7R/X5R,,3 MCU,Required by MCU internal 1.2 V core regulator (VCAP_2)
+C21,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,3 MCU,Reset filter: clean reset at power-up
+Y1,8MHz,Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm,"8 MHz 3225 crystal, CL 12 pF",,3 MCU,8 MHz crystal: precise clock (needed for USB and Betaflight timing)
+C22,18pF,Capacitor_SMD:C_0402_1005Metric,0402 18pF X7R/X5R,,3 MCU,Crystal load cap
+C23,18pF,Capacitor_SMD:C_0402_1005Metric,0402 18pF X7R/X5R,,3 MCU,Crystal load cap
+R6,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,,3 MCU,BOOT0 pull-down: normal start-up runs Betaflight
+SW1,BOOT,Button_Switch_SMD:SW_SPST_PTS810,C&K PTS810 SJM 250 SMTR LFS,,3 MCU,BOOT button: hold while plugging USB to enter flashing (DFU) mode
+R7,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,,3 MCU,BOOT1 (PB2) pull-down
+R8,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,,3 MCU,Current limit for status LED
+D5,BLUE,LED_SMD:LED_0603_1608Metric,0603 blue LED,,3 MCU,"Status LED, driven by Betaflight (PC8 pulls low = on)"
+J1,USB-C,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,HRO TYPE-C-31-M-12,,4 USB-C,"USB-C socket: configure, flash, power on the bench"
+R9,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,,4 USB-C,CC1 pull-down: tells USB-C sources to supply 5 V
+R10,5.1k,Resistor_SMD:R_0603_1608Metric,0603 5.1k 1%,,4 USB-C,CC2 pull-down (for the other plug orientation)
+U4,USBLC6-2SC6,Package_TO_SOT_SMD:SOT-23-6,USBLC6-2SC6,,4 USB-C,ESD protection for USB data lines
+U5,BMI270,Package_LGA:Bosch_LGA-14_3x2.5mm_P0.5mm,BMI270,,5 Gyro,Gyro + accelerometer on SPI1
+C24,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,5 Gyro,Decoupling at gyro VDD
+C25,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,5 Gyro,Decoupling at gyro VDDIO
+C26,1uF,Capacitor_SMD:C_0603_1608Metric,0603 1uF X7R/X5R,,5 Gyro,Bulk cap for gyro supply
+J2,microSD,Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5,Hirose DM3AT-SF-PEJM5,,6 microSD (optional),Blackbox log card socket (SPI2)
+R11,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,,6 microSD (optional),Pull-up: card stays deselected while MCU boots
+R12,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,,6 microSD (optional),Pull-up on card data out
+R13,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,,6 microSD (optional),Pull-up: unused card pin held high
+R14,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,,6 microSD (optional),Pull-up: unused card pin held high
+C27,10uF,Capacitor_SMD:C_0805_2012Metric,0805 10uF X7R/X5R,,6 microSD (optional),Absorbs current spikes when the card writes
+C28,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,6 microSD (optional),Decoupling at card VDD
+R15,10k,Resistor_SMD:R_0603_1608Metric,0603 10k 1%,,"7 Sense, beeper, I2C",Battery divider top (divide by 11)
+R16,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,,"7 Sense, beeper, I2C",Battery divider bottom: 25.2 V becomes 2.3 V
+C29,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,"7 Sense, beeper, I2C",Filters noise on battery reading
+R17,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,,"7 Sense, beeper, I2C",Current signal filter resistor
+C30,100nF,Capacitor_SMD:C_0402_1005Metric,0402 100nF X7R/X5R,,"7 Sense, beeper, I2C",Current signal filter cap
+R18,1k,Resistor_SMD:R_0603_1608Metric,0603 1k 1%,,"7 Sense, beeper, I2C",MOSFET gate resistor
+R19,100k,Resistor_SMD:R_0603_1608Metric,0603 100k 1%,,"7 Sense, beeper, I2C",Keeps buzzer silent while MCU boots
+Q1,2N7002,Package_TO_SOT_SMD:SOT-23,2N7002,,"7 Sense, beeper, I2C",Switch that turns the buzzer on (MCU pin too weak alone)
+R20,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,,"7 Sense, beeper, I2C",I2C pull-up (for optional baro/compass)
+R21,4.7k,Resistor_SMD:R_0603_1608Metric,0603 4.7k 1%,,"7 Sense, beeper, I2C",I2C pull-up (for optional baro/compass)
+J3,ESC,Connector_JST:JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal,JST SM08B-SRSS-TB,,8 Connectors + pads,Cable to the 4-in-1 ESC. CHECK pin order against your ESC manual
+J4,RX: 5V G T1 R1,fc_fp:SolderPads_1x04_P2.54mm,,,8 Connectors + pads,Receiver pads (UART1). FC T1 goes to receiver RX
+J5,VTX: VBAT G T2 R2,fc_fp:SolderPads_1x04_P2.54mm,,,8 Connectors + pads,"Digital VTX pads (UART2, OSD via MSP DisplayPort)"
+J6,GPS: 5V G T3 R3,fc_fp:SolderPads_1x04_P2.54mm,,,8 Connectors + pads,GPS pads (UART3)
+J7,UART6: 3V3 G T6 R6,fc_fp:SolderPads_1x04_P2.54mm,,,8 Connectors + pads,Spare UART pads
+J8,LED: 5V G LED,fc_fp:SolderPads_1x03_P2.54mm,,,8 Connectors + pads,WS2812 LED strip pads
+J9,BUZ: + -,fc_fp:SolderPads_1x02_P2.54mm,,,8 Connectors + pads,Buzzer pads (5 V buzzer)
+J10,SWD: 3V3 IO CK RST G,fc_fp:SolderPads_1x05_P2.54mm,,,8 Connectors + pads,SWD debug/recovery pads for an ST-Link
+J11,I2C: 3V3 G SCL SDA,fc_fp:SolderPads_1x04_P2.54mm,,,8 Connectors + pads,I2C pads for optional barometer/compass

@@ -1,0 +1,8 @@
+(footprint "MountingHole_4.0mm_Grommet" (version 20221018) (generator pcbnew) (layer "F.Cu")
+  (descr "4.0 mm non-plated hole for M3 bolt with rubber soft-mount grommet") (attr exclude_from_pos_files exclude_from_bom)
+  (fp_text reference "REF**" (at 0 -3.6) (layer "F.SilkS") hide (effects (font (size 0.8 0.8) (thickness 0.12))) (tstamp a6de377c-cac0-4a09-b1a7-3b66bf32cb5d))
+  (fp_text value "MountingHole_4.0mm_Grommet" (at 0 3.6) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.12))) (tstamp c9996a53-d636-4e50-93d1-1491e365f154))
+  (fp_circle (center 0 0) (end 3 0) (stroke (width 0.05) (type solid)) (fill none) (layer "F.CrtYd") (tstamp 99343e4c-535b-48f2-afd5-cc255ff4f02c))
+  (fp_circle (center 0 0) (end 2.8 0) (stroke (width 0.12) (type solid)) (fill none) (layer "Cmts.User") (tstamp 96f0b501-7f5d-4e1f-8ccb-bb6356072792))
+  (pad "" np_thru_hole circle (at 0 0) (size 4 4) (drill 4) (layers "*.Cu" "*.Mask") (tstamp cba7ac01-a314-472e-93ea-f32db7dc0781))
+  )

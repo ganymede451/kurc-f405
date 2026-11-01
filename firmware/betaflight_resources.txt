@@ -1,0 +1,7 @@
+# Betaflight CLI resource remaps for KURC F405 rev1
+# Base target: SPEEDYBEEF405V3
+# If you changed any pins from the stock target, list them here, e.g.:
+#   resource SPI_MOSI 2 C03
+#   resource LED 1 B01
+#   save
+# rev1: no remaps (stock pinout)

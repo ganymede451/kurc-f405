@@ -1,0 +1,22 @@
+# KiCad backups and caches
+*.kicad_prl
+*-backups/
+.history/
+*.lck
+~*.lck
+fp-info-cache
+*.bak
+*_bkup*
+*-bak
+_autosave-*
+#auto_saved_files#
+
+# Raw fab outputs (commit only the zip in fabrication/)
+gerbers/
+*.gbr
+*.drl
+*.gbrjob
+
+# OS / editor
+.DS_Store
+*.swp
