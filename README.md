@@ -1,7 +1,7 @@
 # KURC F405 Flight Controller
 
 A 40×40 mm, 4-layer STM32F405 flight controller for Betaflight,
-designed in KiCad by the Kathmandu University Robotics Club (KURC).
+designed in KiCad.
 Pin mapping follows the SpeedyBee F405 V3 (`SPEEDYBEEF405V3` target).
 
 <!-- Add renders: KiCad 3D Viewer → File → Export Current View as PNG -->
