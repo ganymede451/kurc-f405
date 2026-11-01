@@ -4,7 +4,7 @@ A 40×40 mm, 4-layer STM32F405 flight controller for Betaflight,
 designed in KiCad.
 Pin mapping follows the SpeedyBee F405 V3 (`SPEEDYBEEF405V3` target).
 
-<img width="1241" height="1170" alt="261102_02h52m52s_screenshot" src="https://github.com/user-attachments/assets/59117928-cde4-4c09-bfd6-3755afe82c5d" />
+<img width="541" height="570" alt="261102_02h52m52s_screenshot" src="https://github.com/user-attachments/assets/59117928-cde4-4c09-bfd6-3755afe82c5d" />
 
 ## Specs
 | | |
@@ -19,7 +19,7 @@ Pin mapping follows the SpeedyBee F405 V3 (`SPEEDYBEEF405V3` target).
 | ESC | External 4-in-1 via 8-pin JST-SH |
 
 ## Layer stack
-<img width="873" height="713" alt="261102_02h53m32s_screenshot" src="https://github.com/user-attachments/assets/08fd27c8-99ae-43b6-b20c-18a0cd21f57e" />
+<img width="553" height="553" alt="261102_02h53m32s_screenshot" src="https://github.com/user-attachments/assets/08fd27c8-99ae-43b6-b20c-18a0cd21f57e" />
 
 
 1. **F.Cu**: components and signals
