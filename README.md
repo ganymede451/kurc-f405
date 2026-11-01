@@ -1,4 +1,5 @@
 # KURC F405 Flight Controller
+<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/97791456-2a77-4c99-bd85-ded60e86406f" />
 
 A 40×40 mm, 4-layer STM32F405 flight controller for Betaflight,
 designed in KiCad.
@@ -20,6 +21,8 @@ Pin mapping follows the SpeedyBee F405 V3 (`SPEEDYBEEF405V3` target).
 | ESC | External 4-in-1 via 8-pin JST-SH |
 
 ## Layer stack
+<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/e5ec0490-2b8d-41cc-bc9e-da1fc866aca5" />
+
 1. **F.Cu**: components and signals
 2. **In1**: GND plane
 3. **In2**: +3V3 plane
